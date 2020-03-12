@@ -4,6 +4,7 @@
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
+		<property name="hbm2ddl.auto">create</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<property name="hibernate.connection.password">dubey4567</property>
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3307/hibernate</property>
