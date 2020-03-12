@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-public class App {
+public class BookDao {
 	public static void main(String[] args) {
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml");
@@ -16,13 +16,14 @@ public class App {
 
 		Transaction t = ses.beginTransaction();
 
-		Employee e1 = new Employee();
+		Book b1 = new Book();
 
-		e1.setFirstName("Shubham");
-		e1.setLastName("Dubey");
-		e1.setSalary(100000);
+		b1.setBookId(1);
+		b1.setBookName("JAVA");
+		b1.setPrice(100);
+		b1.setAuthor("SD");
 
-		ses.save(e1);
+		ses.save(b1);
 		t.commit();
 		System.out.println("Successfully Saved");
 
@@ -30,4 +31,5 @@ public class App {
 		sf.close();
 
 	}
+
 }

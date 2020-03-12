@@ -2,9 +2,9 @@ package com.niit.a.hibernetdemo;
 
 public class Employee {
 	private int id;
-	private int salary;
 	private String firstName;
 	private String lastName;
+	private int salary;
 
 	public Employee() {
 	}
